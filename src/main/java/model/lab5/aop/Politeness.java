@@ -21,10 +21,10 @@ public class Politeness {
         AopLog.append("Is " + ((Squishee) retVal).getName() + " Good Enough? \n");
     }
 
-    @AfterThrowing("execution(* sellSquishee(..))")
-    public void sayYouAreNotAllowed() {
-        AopLog.append("Hmmm... \n");
-    }
+//    @AfterThrowing("execution(* sellSquishee(..))")
+//    public void sayYouAreNotAllowed() {
+//        AopLog.append("Hmmm... \n");
+//    }
 
     @AfterReturning(pointcut = "execution(* sellSquishee(..))",
             returning = "retVal", argNames = "retVal")

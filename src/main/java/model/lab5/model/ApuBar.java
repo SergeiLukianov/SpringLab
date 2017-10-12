@@ -8,7 +8,7 @@ public class ApuBar implements Bar {
         if (customer.isBroke()){
             throw new CustomerBrokenException();
         } else {
-            AopLog.append("Here is your squishee \n");
+            AopLog.append("Here is your squishee\n");
             return new Squishee("regular squishee");
         }
     }

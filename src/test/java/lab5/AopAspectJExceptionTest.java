@@ -6,6 +6,7 @@ import model.lab5.model.Bar;
 import model.lab5.model.Customer;
 
 import model.lab5.model.CustomerBrokenException;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,6 +29,11 @@ public class AopAspectJExceptionTest {
     @Before
     public void setUp() throws Exception {
         customer.setBroke(true);
+    }
+
+    @After
+    public void tearDown() {
+        customer.setBroke(false);
     }
 
     @Test(expected = CustomerBrokenException.class)
