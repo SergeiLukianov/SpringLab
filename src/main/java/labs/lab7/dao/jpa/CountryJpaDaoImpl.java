@@ -2,8 +2,8 @@ package labs.lab7.dao.jpa;
 
 import labs.lab7.dao.CountryDao;
 import labs.lab7.model.Country;
-import org.springframework.stereotype.Repository;
 
+import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import java.util.List;
 
