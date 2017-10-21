@@ -1,4 +1,4 @@
-package model.lab5.aop;
+package labs.lab5.aop;
 
 public class AopLog {
     private static StringBuffer value = new StringBuffer();

@@ -1,7 +1,7 @@
 package lab3;
 
-import model.Country;
-import model.UsualPerson;
+import labs.Country;
+import labs.UsualPerson;
 
 import org.junit.After;
 import org.junit.Before;
@@ -10,13 +10,12 @@ import static org.junit.Assert.*;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import java.util.Arrays;
 
 public class HelloWorldTest {
 
-    protected static final String APPLICATION_CONTEXT_XML_FILE_NAME = "context.xml";
+    protected static final String APPLICATION_CONTEXT_XML_FILE_NAME = "helloworld-context";
 
     private UsualPerson expectedPerson;
 

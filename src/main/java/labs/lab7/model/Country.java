@@ -1,11 +1,21 @@
-package model.lab6.model;
+package labs.lab7.model;
 
-public class Country {
+import javax.persistence.*;
+import java.io.Serializable;
 
+@Entity
+@Table(name = "COUNTRY")
+public class Country implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue
     private int id;
 
+    @Column(name = "NAME")
     private String name;
-
+    @Column(name = "CODE_NAME")
     private String codeName;
 
     public Country() {
@@ -22,6 +32,8 @@ public class Country {
         this.codeName = codeName;
     }
 
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -30,6 +42,7 @@ public class Country {
         this.id = id;
     }
 
+//    @Column(name = "NAME")
     public String getName() {
         return name;
     }
@@ -38,6 +51,7 @@ public class Country {
         this.name = name;
     }
 
+//    @Column(name = "CODE_NAME")
     public String getCodeName() {
         return codeName;
     }
@@ -46,18 +60,19 @@ public class Country {
         this.codeName = codeName;
     }
 
-    public String toString() {
-        return id + ". " + name + " (" + codeName + ")";
-    }
-
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
 
         Country country = (Country) o;
 
-        if (codeName != null ? !codeName.equals(country.codeName) : country.codeName != null) return false;
-        if (name != null ? !name.equals(country.name) : country.name != null) return false;
+        if (codeName != null ? !codeName.equals(country.codeName)
+                : country.codeName != null)
+            return false;
+        if (name != null ? !name.equals(country.name) : country.name != null)
+            return false;
 
         return true;
     }
@@ -67,5 +82,11 @@ public class Country {
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (codeName != null ? codeName.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Country [id=" + id + ", name=" + name + ", codeName="
+                + codeName + "]";
     }
 }

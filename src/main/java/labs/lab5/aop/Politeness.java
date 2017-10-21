@@ -1,7 +1,7 @@
-package model.lab5.aop;
+package labs.lab5.aop;
 
-import model.lab5.model.Customer;
-import model.lab5.model.Squishee;
+import labs.lab5.model.Customer;
+import labs.lab5.model.Squishee;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;

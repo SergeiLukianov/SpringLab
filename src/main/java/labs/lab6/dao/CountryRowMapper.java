@@ -1,6 +1,6 @@
-package model.lab6.dao;
+package labs.lab6.dao;
 
-import model.lab6.model.Country;
+import labs.lab6.model.Country;
 
 import org.springframework.jdbc.core.RowMapper;
 

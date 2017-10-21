@@ -1,11 +1,11 @@
 package lab5;
 
 
-import model.lab5.aop.AopLog;
-import model.lab5.model.Bar;
-import model.lab5.model.Customer;
+import labs.lab5.aop.AopLog;
+import labs.lab5.model.Bar;
+import labs.lab5.model.Customer;
 
-import model.lab5.model.CustomerBrokenException;
+import labs.lab5.model.CustomerBrokenException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +17,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:context.xml")
+@ContextConfiguration("classpath:aop-context")
 public class AopAspectJExceptionTest {
 
     @Autowired

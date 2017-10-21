@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Country;
-import model.UsualPerson;
+import labs.Country;
+import labs.UsualPerson;
 
 
 import org.junit.Before;
@@ -17,7 +17,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:context.xml")
+@ContextConfiguration("classpath:helloworld-context")
 public class SpringTCFAppTest {
 
     @Autowired

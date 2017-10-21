@@ -1,7 +1,6 @@
-package model.lab5.model;
+package labs.lab5.model;
 
-import lombok.Setter;
-import model.Person;
+import labs.Person;
 
 
 public class Customer {

@@ -6,8 +6,8 @@ import org.junit.*;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import model.UsualPerson;
-import model.Country;
+import labs.UsualPerson;
+import labs.Country;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class SimpleAppTest {
 
-    protected static final String APPLICATION_CONTEXT_XML_FILE_NAME = "classpath:context.xml";
+    protected static final String APPLICATION_CONTEXT_XML_FILE_NAME = "helloworld-context";
 
     private AbstractApplicationContext context;
 

@@ -1,6 +1,6 @@
-package model.lab5.model;
+package labs.lab5.model;
 
-import model.lab5.aop.AopLog;
+import labs.lab5.aop.AopLog;
 
 public class ApuBar implements Bar {
 

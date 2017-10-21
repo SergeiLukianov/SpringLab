@@ -1,8 +1,7 @@
 package lab6;
 
-import model.lab6.dao.CountryDao;
-import model.lab6.model.Country;
-import org.junit.After;
+import labs.lab6.dao.CountryDao;
+import labs.lab6.model.Country;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +17,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:context.xml")
+@ContextConfiguration("classpath:jdbc-context")
 public class JdbcTest{
 
     @Autowired
@@ -31,17 +30,12 @@ public class JdbcTest{
     @Before
     public void setUp() throws Exception {
         initExpectedCountryLists();
-//        Не нужен, т.к. начальные страны загружаются
-//        сразу после создания БД
-//        countryDao.loadCountries();
-//        Это делять нельзя т.е. Загрузка в БД происходит
-//        перед каждым тестом
     }
 
 
 
     @Test
-//    @DirtiesContext
+    @DirtiesContext
     public void testCountryList() {
         List<Country> countryList = countryDao.getCountryList();
         assertNotNull(countryList);
@@ -52,19 +46,18 @@ public class JdbcTest{
     }
 
     @Test
-//    @DirtiesContext
+    @DirtiesContext
     public void testCountryListStartsWithA() {
         List<Country> countryList = countryDao.getCountryListStartWith("A");
         assertNotNull(countryList);
         assertEquals(expectedCountryListStartsWithA.size(), countryList.size());
-        System.out.println(countryList);
         for (int i = 0; i < expectedCountryListStartsWithA.size(); i++) {
             assertEquals(expectedCountryListStartsWithA.get(i), countryList.get(i));
         }
     }
 
     @Test
-//    @DirtiesContext
+    @DirtiesContext
     public void testCountryChange() {
         countryDao.updateCountryName("RU", "Russia");
         assertEquals(countryWithChangedName, countryDao.getCountryByCodeName("RU"));

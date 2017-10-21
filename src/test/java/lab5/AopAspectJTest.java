@@ -1,12 +1,10 @@
 package lab5;
 
-import model.lab5.aop.AopLog;
-import model.lab5.model.ApuBar;
-import model.lab5.model.Bar;
-import model.lab5.model.Customer;
+import labs.lab5.aop.AopLog;
+import labs.lab5.model.ApuBar;
+import labs.lab5.model.Bar;
+import labs.lab5.model.Customer;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +15,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:context.xml")
+@ContextConfiguration("classpath:aop-context")
 public class AopAspectJTest {
 
     @Autowired
