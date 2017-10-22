@@ -32,8 +32,6 @@ public class Country implements Serializable {
         this.codeName = codeName;
     }
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
         return id;
     }
@@ -42,7 +40,6 @@ public class Country implements Serializable {
         this.id = id;
     }
 
-//    @Column(name = "NAME")
     public String getName() {
         return name;
     }
@@ -51,7 +48,6 @@ public class Country implements Serializable {
         this.name = name;
     }
 
-//    @Column(name = "CODE_NAME")
     public String getCodeName() {
         return codeName;
     }

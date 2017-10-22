@@ -21,6 +21,18 @@ public class CountryJpaDaoImpl extends AbstractJpaDao implements CountryDao {
         }
     }
 
+    public void delete(Country country) {
+        EntityManager em = emf.createEntityManager();
+        if (em != null) {
+            em.getTransaction().begin();
+            em.remove(em.contains(country) ? country : em.merge(country));
+            em.getTransaction().commit();
+
+
+            em.close();
+        }
+    }
+
     public List<Country> getAllCountries() {
         EntityManager em = emf.createEntityManager();
         List<Country> result = null;
