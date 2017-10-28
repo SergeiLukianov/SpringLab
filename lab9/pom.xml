@@ -90,7 +90,7 @@
                 <version>2.2</version>
                 <configuration>
                     <port>8080</port>
-                    <path>/lab9</path>
+                    <path>/lab-9-mvc</path>
                 </configuration>
             </plugin>
         </plugins>
