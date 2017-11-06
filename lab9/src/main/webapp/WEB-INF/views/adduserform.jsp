@@ -14,13 +14,12 @@
 </head>
 <body>
 
-<h3><spring:message code="form.adduser.name" /></h3>
+<h3><spring:message code="form.adduser.name"/></h3>
 <form:form commandName="userFormBean">
 	<table>
 		<tr>
-			<!-- TODO: Try to use tag "spring:message" instead of direct message below-->
-			<td>First Name:</td> 
-			<td><form:input path="firstName" /></td>
+			<td><spring:message code="name.first"/></td>
+			<td><form:input path="firstName"/></td>
 		</tr>
 		<tr>
 			<td colspan="2" style="color: red; font-size: small;">
