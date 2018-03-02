@@ -8,11 +8,11 @@ public class UserFormBean {
 
     public UserFormBean(){}
 
-    @NotNull (message="{NotNull.userFormBean.firstName}")
+    @NotNull (message="{Size.userFormBean.firstName}")
     @Size(min = 2, max = 20)
     private String firstName;
 
-    @NotNull
+    @NotNull(message = "{Size.userFormBean.lastName}")
     @Size(min = 2, max = 30)
     private String lastName;
 
