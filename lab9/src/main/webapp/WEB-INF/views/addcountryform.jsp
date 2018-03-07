@@ -24,7 +24,7 @@
 		</tr>
 		<tr>
 			<td colspan="2" style="color: red; font-size: small;">
-				<form:errors path="codeName" />
+				<form:errors path="name" />
 			</td>
 		</tr>
 		<tr>

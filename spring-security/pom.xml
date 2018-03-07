@@ -62,6 +62,11 @@
             <artifactId>spring-webmvc</artifactId>
             <version>4.3.10.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf-spring5</artifactId>
+            <version>3.0.9.RELEASE</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -79,8 +84,8 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <port>8080</port>
-                    <path>/ss</path>
+                    <path>/</path>
+                    <contextReloadable>true</contextReloadable>
                 </configuration>
             </plugin>
         </plugins>

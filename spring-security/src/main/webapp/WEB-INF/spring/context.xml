@@ -5,6 +5,6 @@
 
     <bean id="person" class="model.Person">
         <property name="email" value="asd@asd.ru"/>
-        <property name="username" value="John KKK"/>
+        <property name="username" value="John K."/>
     </bean>
 </beans>
